@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/_components/Header";
 import { ClerkProvider } from "@clerk/nextjs";
+import layout from "@/app/dashboard/layout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
