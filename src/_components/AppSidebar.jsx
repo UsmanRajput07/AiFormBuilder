@@ -1,4 +1,5 @@
-import { Home, BookOpen, NotebookPen } from "lucide-react"
+
+import { Home, BookOpen, NotebookPen } from "lucide-react";
 import {
   Sidebar,
   SidebarContent,
@@ -8,8 +9,12 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarFooter,
-} from "@/components/ui/sidebar"
-import Link from "next/link"
+} from "@/components/ui/sidebar";
+import Link from "next/link";
+import CreateForm from "./CreateForm";
+// import { useState } from "react";
+// import { AiChatSession } from "@/config/AiModal";
+
 // import UserProfile from "../components/UserProfile"
 // import { Link } from "react-router"
 
@@ -30,9 +35,11 @@ const items = [
     url: "/dashBoard/createBook",
     icon: NotebookPen,
   },
-]
+];
+
 
 export default function AppSidebar() {
+  // const [inputs, setInputs] = useState("");
   return (
     <Sidebar variant="inset" collapsible="icon">
       <SidebarContent>
@@ -54,8 +61,8 @@ export default function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        {/* <UserProfile/> */}
+              <CreateForm/>
       </SidebarFooter>
     </Sidebar>
-  )
+  );
 }
