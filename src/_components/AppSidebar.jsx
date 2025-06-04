@@ -1,4 +1,3 @@
-
 import { Home, BookOpen, NotebookPen } from "lucide-react";
 import {
   Sidebar,
@@ -12,6 +11,7 @@ import {
 } from "@/components/ui/sidebar";
 import Link from "next/link";
 import CreateForm from "./CreateForm";
+import { Progress } from "@/components/ui/progress";
 // import { useState } from "react";
 // import { AiChatSession } from "@/config/AiModal";
 
@@ -37,7 +37,6 @@ const items = [
   },
 ];
 
-
 export default function AppSidebar() {
   // const [inputs, setInputs] = useState("");
   return (
@@ -61,7 +60,8 @@ export default function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-              <CreateForm/>
+        <Progress value={33} className="w-full" />
+        <CreateForm />
       </SidebarFooter>
     </Sidebar>
   );
