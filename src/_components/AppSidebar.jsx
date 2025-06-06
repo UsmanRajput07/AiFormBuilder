@@ -26,8 +26,8 @@ const items = [
     icon: Home,
   },
   {
-    title: "Books",
-    url: "/dashBoard/books",
+    title: "Edit",
+    url: "/dashboard/edit-form",
     icon: BookOpen,
   },
   {
